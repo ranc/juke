@@ -50,7 +50,7 @@ class WordCounter:
         self.base_url = base_url
         self.word_dict = {}
         with open(index_file) as f:
-            self.page_set = set(f.readlines())
+            self.page_set = set(page.strip() for page in f.readlines())
 
     def start_counting(self) -> Dict[str, Dict[str, int]]:
         for page in self.page_set:

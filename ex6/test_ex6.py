@@ -1,6 +1,7 @@
 import unittest
 
 from ex6.crawl import Crawler, WordCounter
+from ex6.moogle import search_pages
 from ex6.page_rank import rank_pages
 
 BASE_URL = "https://www.cs.huji.ac.il/~intro2cs1/ex6/wiki/"
@@ -34,6 +35,9 @@ class TestEx6(unittest.TestCase):
         counter = WordCounter(BASE_URL, "small_index.txt")
         counter.start_counting()
         print(counter.word_dict["Harry"])
+
+    def test_part4(self):
+        search_pages(["scar", "crookshanks"], "rank.pickle", "words.pickle",  5)
 
 
 if __name__ == "__main__":
