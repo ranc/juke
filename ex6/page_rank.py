@@ -23,5 +23,7 @@ def rank_pages(word_dict: Dict[str, Dict[str, int]], iterations) -> Dict[str, in
                     continue
                 num_links_i_to_j = link_i_to_all[page_j]
                 new_page_ranks[page_j] += page_ranks[page_i]*num_links_i_to_j/total_links_from[page_i]
+
         page_ranks = new_page_ranks
+    print(page_ranks)
     return page_ranks
