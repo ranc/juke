@@ -1,8 +1,13 @@
 python moogle.py crawl "https://www.cs.huji.ac.il/~intro2cs1/ex6/wiki/" small_index.txt pages.pickle
-python moogle.py page_rank 2 pages.pickle rank.pickle
+python moogle.py page_rank 100 pages.pickle rank.pickle
 python moogle.py words_dict "https://www.cs.huji.ac.il/~intro2cs1/ex6/wiki/" small_index.txt words.pickle
 python moogle.py search "scar" rank.pickle words.pickle 4 > results.txt
+echo "*******"  >> results.txt
 python moogle.py search "Crookshanks" rank.pickle words.pickle 4 >> results.txt
+echo "*******"  >> results.txt
 python moogle.py search "Horcrux" rank.pickle words.pickle 4 >> results.txt
+echo "*******"  >> results.txt
 python moogle.py search "Pensieve McGonagall" rank.pickle words.pickle 4 >> results.txt
+echo "*******"  >> results.txt
 python moogle.py search "broom wand cape" rank.pickle words.pickle 4 >> results.txt
+echo "*******"  >> results.txt

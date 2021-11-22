@@ -74,11 +74,11 @@ if __name__ == "__main__":
         exit(0)
     if cmd == 'page_rank':
         iterations = int(sys.argv[2])
-        word_dict_filename = sys.argv[3]
+        traffic_dict_filename = sys.argv[3]
         out_file = sys.argv[4]
 
-        word_dict = load_object(word_dict_filename)
-        ranks = rank_pages(word_dict, iterations)
+        traffic_dict = load_object(traffic_dict_filename)
+        ranks = rank_pages(traffic_dict, iterations)
         save_object(ranks, out_file)
         exit(0)
     if cmd == 'words_dict':
@@ -101,7 +101,7 @@ if __name__ == "__main__":
         results = search_pages(query_list, rank_filename, words_filename, max_results)
         for page, score in results:
             print(page, score)
-        print("*"*10)
+        #print("*"*10)
         exit(0)
 
     usage()

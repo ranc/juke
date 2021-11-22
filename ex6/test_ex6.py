@@ -6,6 +6,7 @@ from ex6.page_rank import rank_pages
 
 BASE_URL = "https://www.cs.huji.ac.il/~intro2cs1/ex6/wiki/"
 
+
 class TestEx6(unittest.TestCase):
     def test_part1(self):
         crawler = Crawler(BASE_URL, "small_index.txt")
@@ -16,7 +17,7 @@ class TestEx6(unittest.TestCase):
         word_dict = {
             "Hogwarts": {"Harry": 1, "Hogwarts":10},
             "Harry": {"Harry": 10, "Herminone": 1, "Draco": 1},
-            "Draco": {"Harry": 1},
+            "Draco": {"Harry": 1, "Draco": 4},
             "Herminone": {"Herminone": 5}
         }
         print(rank_pages(word_dict, 100))
